@@ -29,16 +29,24 @@ or won't be discovered.  No warrantee could possibly be given at my limited secu
 level of experience. Even so, this was designed specifically so that banks or people with secrets could deliver
 or store their information in a way that only the holder of passwords could retrieve.  A single character
 different, added, or missing would not necessarily show much difference for the first dozen bytes, but would
-throw a decryption attempt off for most of the rest of the file, returning random garbage. For convinience
-and universal portability, each processed chunk of data is 57 bytes long, matching the 76 base64 representation.
+throw a decryption attempt off for most of the rest of the file, returning random garbage. For convenience
+and universal portability, each processed chunk of data is 57 bytes long, matching the typical 76 base64 representation.
 This system allows easy integration with efficient file encryption into an email or compression format.
+This is not ideal, cryptographically speaking, however, if a person changes that default buffer/unit
+length to  a larger size the exact same size must also be used when decrypting.  Also, 57 bytes is great
+for streaming through a pipe or into email, but very poor encryption length if you know the type of file
+and the algorithm, since a cracker would just try the whatever makes a recognizable header for that file type;
+therefore, for serious encryption (bank/government) either very long keys (maybe three 2048 character keys) should
+be used, or the encoding buffer should be increased to an appropriate size that is a multiple of three
+(1026+, there is no defined limit, but
+system memory could impose a limit in the range of a few hundred million).
 
 Whether you are a regular person who has sensitive information or a super up-tight security master,
 the simple but effective nature having variable length/number-of passwords (1 to theoretically infinity
 characters in length) makes your encryption key(s) easy enough to remember that you don't have
 to write it down or save it where it can be seen,
 and secure enough that even a security expert could work for months or years
-trying to decrypt a single file (requires longer passwords). 
+trying to decrypt a single file (requires longer than typical login passwords). 
 
 Currently, One old and incomplete version is compiled from C# for .Net, so it can run on any machine that has .NET
 installed (Mono for Linux/Mac) My souces are in a scattered mess after a necessary upgrade/conversion
