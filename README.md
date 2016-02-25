@@ -81,6 +81,54 @@ of portability, while being very nearly impossible to crack.  The old default wi
 in some way, so that anyone using a new version with an old will not perminantly lose something very important.
 (Algorithms can be chosen by command line options or by connected software).
 
+Right now I am releasing the code conditionally and temporarily
+to individuals for testing only and no commercial use other than testing
+feasability.
+If you want to download the project and improve it or treat it as GPL, then contact me
+so I can coordinate that effort with you and possibly incoporate your work into what I have here.
+Open Source is the best, but not everything should be so limited, since some things need to be funded
+for continuous support or are appropriately crafted as a sell-able product.  I am, how-ever, strongly
+opposed to the concept of software patents.  In my coding I would prefer just pretend they don't
+exist, since they shouldn't -- and actually, they obstruct the very purpose (regular-) patents were
+legalized for.  Earlier law makers could not have forseen how huge a counter-intuitive impact patents
+have had on good software development.  The only conceivable benefit I have observed is the general
+discouragement from the average person pirating DVDs or software that has been the subject of some
+investment.  Microsoft and IBM didn't need patents to protect their work, since copyright law
+would have sufficed, and if copyright law wasn't quite adequate, a number of enhancements to cover
+cross-language transcriptions, penalties, and the like would have been enough.  By the very mathematically
+constant nature of any computer algorithm, it will eventually be discovered and used, repeatedly.  Inventions
+of a more physical nature are inherently different in that there are many, many, many more possibilities
+than anyone may ever observe in a life-time.  How these two then compare in the context of furthering
+the development
+of science and wealth in the United States and the world, is that stopping the inevitable discovery
+and use of a computer algorithm slows the growth and development of the entire field of science and industry,
+while stopping duplicate production and sale of an idea patented as a non-algoritmic, physical invention
+focuses the profits to an individual or group, increasing industry and providing much needed incentive
+to put effort into the science and industry with the hope of reward.  Since software patents have
+historically only slowed progress, and sometimes been ignored due to the ridiculously redundant effort
+of enforcing some of them, I am surprised that we as a nation still legally support them.  To summarize
+my point, if Intel holds a patent for a particular design of chip, they exclusively support, develop,
+and profit financially from the chip and every one else benefits more from it; Whereas, if Intel also
+patents a software formula that would make software run 1/3 faster, utilizing the new chip, and then
+enforces that patent, everyone's progress slows, including even the incentive for Intel to keep inventing their
+way to the future.  The software and designs they create may be their's, but the fundemental algorithm just like any
+principle founded idea, belongs to no one and is only bound to someone by patent laws with the intent
+that the whole of society will benefit.
+If I am ever (some long future day)
+approached about some software patent issue, I will very likely just archive my work and prepare an
+alternative for the public project, like others have done.  Sometimes this process actually forces
+a programmer to innovate something better, plus I am a person of principle and do not intend any
+disrespect for someone else who has obtained a software patent.
+
+The .NET version was not made on the AdaCore GPL runtime, and though it will be open source, it
+is not yet and is not legally bound to be.  When it is ready, the Ada version may be compiled onto
+.NET with the AdaCore GPL runtime, since it will be fine to make that item fully GPL, with the original
+code possibly being LGPL like all encryption framework and components should be.
+I want the code to enter general use when it is good enough to perform reliably for real use.
+I am not yet decided on whether I will Use an MIT, BSD, or LGPL license.  They are very
+similar and essencially cover what I have intended.  If you have any recommendations, send you comments
+to my GitHub user-name at gmail.com.  This is my email as a programmer and is almost dedicated to that purpose.
+
 
 
 
