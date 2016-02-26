@@ -1,0 +1,21 @@
+project PassEncrypt is
+
+   for Source_Dirs use (".");
+
+   package Builder is
+      for Default_Switches ("ada") use ("-g");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g", "-gnat12");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-g");
+   end Binder;
+
+   package Ide is
+   end Ide;
+
+end PassEncrypt;
+
