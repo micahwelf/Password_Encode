@@ -81,11 +81,14 @@ of portability, while being very nearly impossible to crack.  The old default wi
 in some way, so that anyone using a new version with an old will not perminantly lose something very important.
 (Algorithms can be chosen by command line options or by connected software).
 
-Right now I am releasing the code conditionally and temporarily
-to individuals for testing only and no commercial use other than testing
-feasability.
-If you want to download the project and improve it or treat it as GPL, then contact me
-so I can coordinate that effort with you and possibly incoporate your work into what I have here.
+If you want to improve this program, please maintain a fork connected to it and communicate with
+me.  It would be really cool for us to improve our group project skills and experience.
+If you want to download the project and improve it or treat it as GPL, then please let me know.
+I prefer the LGPL 3.0 or MIT, because I want to maintain a universal benefit from this project.
+
+##In relation to licensing and the value provided by open source projects to the world, I have some
+comments that I hope you will consider and publicly support, as follows:
+
 Open Source is the best, but not everything should be so limited, since some things need to be funded
 for continuous support or are appropriately crafted as a sell-able product.  I am, how-ever, strongly
 opposed to the concept of software patents.  In my coding I would prefer just pretend they don't
