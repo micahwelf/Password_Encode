@@ -1,12 +1,13 @@
 with Ada.Strings.UTF_Encoding,
      Ada.Sequential_IO,
      Interfaces.C_Streams,
-     Ada.Sequential_IO.C_Streams;
+     Ada.Text_IO.Text_Streams,
+     Ada.Streams.Stream_IO;
 use Ada.Strings.UTF_Encoding;
 
 -- Library to Encrypt raw data with variable length UTF8 Passwords, making
 -- it possible to simply memorize the Passwords as a poem or as random-
--- length stored keys.  zero to three Passwords may be specified.  If none,
+-- length stored keys.  zero to three Passwords may be specified.  If none,.u
 -- then a default built in key is used for the encryption, but the longer
 -- and more Passwords their are the more impossible the encryption becomes
 -- to break.
@@ -14,8 +15,37 @@ package Password_Encode is
 
    type Byte is mod 2**8;
    for Byte'Size use 8;
-   subtype Byte_Index is Integer range 1..57;
-   type Bytes is array(Byte_Index range <>) of Byte;
+
+   type Byte7 is mod 2 ** 7;
+   for Byte7'Size use 7;
+
+   type Byte6 is mod 2 ** 6;
+   for Byte6'Size use 6;
+
+   type Byte5 is mod 2 ** 5;
+   for Byte5'Size use 5;
+
+   type Byte4 is mod 2 ** 4;
+   for Byte4'Size use 4;
+
+   type Byte3 is mod 2 ** 4;
+   for Byte3'Size use 4;
+
+   type Byte2 is mod 2 ** 2;
+   for Byte2'Size use 4;
+
+   type Byte1 is mod 2 ** 1;
+   for Byte1'Size use 4;
+
+--   subtype Byte_Index is Integer range 1..57;
+   type Bytes is array (Positive range <>) of Byte;
+   type Bytes7 is array (Positive range <>) of Byte7;
+   type Bytes6 is array (Positive range <>) of Byte6;
+   type Bytes5 is array (Positive range <>) of Byte5;
+   type Bytes4 is array (Positive range <>) of Byte4;
+   type Bytes3 is array (Positive range <>) of Byte3;
+   type Bytes2 is array (Positive range <>) of Byte2;
+   type Bytes1 is array (Positive range <>) of Byte1;
    type Offset is mod 2**64;
    for Offset'Size use 64;
    type Offsets is array(Positive range <>) of Offset;
@@ -25,9 +55,10 @@ package Password_Encode is
    -- **Incrementing is Modular, but every call to it's value Increments to a
    -- higher value than it would have -- increasing seeming randomness in the
    -- encoded bits. **High_Swap is Low_Swap, but on the end of the block.
-   type Password_Codec is (Modular, Low_Swap, Incrementing, High_Swap);
+   type Password_Codec is (Modular, Low_Swap, Incrementing, High_Swap, Bit_Select);
 
-   package IO is new Ada.Sequential_IO(Byte);
+   package IO renames Ada.Text_IO;
+
    use IO;
 
    -- Base64 encode/decode & test driver.

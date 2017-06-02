@@ -6,12 +6,6 @@ use Ada.Strings.UTF_Encoding;
 
 package body Password_Encode is
 
-   package body IO is
-      use Ada.Sequential_IO;
-      use Ada.Sequential_IO.C_Streams;
-   begin
-      null;
-   end;
    --
    --
    package body Base64 is
@@ -129,28 +123,14 @@ package body Password_Encode is
    --
    --
    function Standard_Input  return IO.File_Type is
-      File_Handle : IO.File_Type;
    begin
-      IO.C_Streams.Open(
-                        File =>
-                          File_Handle,
-                        Mode =>
-                          IO.In_File,
-                        C_Stream =>
-                          IO.C_Streams.ICS.stdin);
-      return File_Handle;
+
+      return IO.Standard_Input;
    end Standard_Input;
+
    function Standard_Output return IO.File_Type is
-      File_Handle : IO.File_Type;
    begin
-      IO.C_Streams.Open(
-                        File =>
-                          File_Handle,
-                        Mode =>
-                          IO.Out_File,
-                        C_Stream =>
-                          IO.C_Streams.ICS.stdout);
-      return File_Handle;
+      return IO.Standard_Output;
    end Standard_Output;
    --
    --

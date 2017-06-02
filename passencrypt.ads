@@ -3,6 +3,8 @@ with Ada.Strings,
      Ada.Strings.UTF_Encoding.Wide_Strings,
      Ada.Command_Line,
      Ada.Directories,
+     Ada.Streams,
+     Ada.Streams.Stream_IO,
      Ada.Sequential_IO,
      Interfaces.C_Streams,
      Password_Encode;
